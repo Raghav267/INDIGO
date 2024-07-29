@@ -27,6 +27,7 @@ Prerequisites
 Node.js and npm (for frontend)
 Python 3.x (for backend)
 MongoDB
+PostGResql
 Firebase account for Cloud Messaging
 
 Frontend Setup

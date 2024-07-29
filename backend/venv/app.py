@@ -9,6 +9,9 @@ app = Flask(__name__)
 mongo_client = MongoClient('mongodb://localhost:27017/')
 mongo_db = mongo_client['flight_status']
 
+pg_conn = psycopg2.connect("dbname=test user=postgres password=secret")
+pg_cursor = pg_conn.cursor()
+
 @app.route('/api/flight-status', methods=['GET'])
 def get_flight_status():
     flight_status = list(mongo_db.flight_status.find({}))
